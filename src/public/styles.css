@@ -1,0 +1,168 @@
+:root {
+    --background: #101114;
+    --primary-color: #1c1d20;
+    --secondary-color: #4a4d57;
+    --accent-color: #00ffc4;
+    --text-color: #f9f9f9;
+  }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-family: cursive;
+    font-size: 16pt;
+    color: var(--text-color);
+  }
+  body {
+    min-height: 100vh;
+    padding: 10px;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--accent-color);
+ }
+
+ .formDiv {
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+
+ #todoText {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    background: none;
+    border: 2px solid var(--secondary-color);
+    border-radius: 1000px;
+    font: inherit;
+    color: var(--text-color);
+    caret-color: var(--accent-color);
+  }
+  #todoText:focus {
+    outline: none;
+  }
+
+  .no-task {
+    position: relative;
+    left: 35%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    background: none;
+    font-weight: 800;
+    font-size: 33px;
+    border-radius: 1000px;
+    color: var(--text-color);
+    caret-color: var(--accent-color);
+  }
+
+  form {
+    position: relative;
+  }
+
+  #todoAdd {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    height: 100%;
+    padding: 0 30px;
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 600;
+    color: var(--background);
+    cursor: pointer;
+  }
+  #todoAdd:hover {
+    background: linear-gradient(45deg,rgb(71, 116, 240),rgb(39, 198, 220));
+  }
+
+  .todo {
+    margin-bottom: 10px;
+    padding: 0 16px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .todo span {
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 1;
+    transition: 200ms ease;
+  }
+
+  .delete-button {
+    padding: 3px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .delete-button svg {
+    transition: 200ms ease;
+  }
+  .delete-button:hover svg{
+    fill: red;
+  }
+
+  .edit-button {
+    padding: 3px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .edit-button svg {
+    transition: 200ms ease;
+  }
+  .edit-button:hover svg{
+    fill: rgb(0, 21, 255);
+  }
+
+  .done-button {
+    padding: 3px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .done-button svg {
+    transition: 200ms ease;
+  }
+  .done-button:hover svg{
+    fill: rgb(13, 191, 60);
+  }
+
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
